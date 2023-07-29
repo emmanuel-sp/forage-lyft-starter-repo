@@ -11,7 +11,7 @@ from carfactory import CarFactory as cf
 class TestCalliope(unittest.TestCase):
     def test_battery_should_be_serviced(self):
         today = datetime.today()
-        last_service_date = today.replace(year=today.year - 3)
+        last_service_date = today.replace(year=today.year - 5)
         current_mileage = 0
         last_service_mileage = 0
 
@@ -20,7 +20,7 @@ class TestCalliope(unittest.TestCase):
 
     def test_battery_should_not_be_serviced(self):
         today = datetime.today()
-        last_service_date = today.replace(year=today.year - 1)
+        last_service_date = today.replace(year=today.year - 3)
         current_mileage = 0
         last_service_mileage = 0
 
@@ -49,7 +49,7 @@ class TestCalliope(unittest.TestCase):
 class TestGlissade(unittest.TestCase):
     def test_battery_should_be_serviced(self):
         today = datetime.today()
-        last_service_date = today.replace(year=today.year - 3)
+        last_service_date = today.replace(year=today.year - 5)
         current_mileage = 0
         last_service_mileage = 0
 
@@ -58,7 +58,7 @@ class TestGlissade(unittest.TestCase):
 
     def test_battery_should_not_be_serviced(self):
         today = datetime.today()
-        last_service_date = today.replace(year=today.year - 1)
+        last_service_date = today.replace(year=today.year - 3)
         current_mileage = 0
         last_service_mileage = 0
 
@@ -95,7 +95,7 @@ class TestPalindrome(unittest.TestCase):
 
     def test_battery_should_not_be_serviced(self):
         today = datetime.today()
-        last_service_date = today.replace(year=today.year - 2)
+        last_service_date = today.replace(year=today.year - 3)
         warning_light_is_on = False
 
         car = cf.create_palindrome(today, last_service_date, warning_light_is_on)
